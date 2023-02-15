@@ -5,6 +5,8 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+import '../styles/globals.css';
+
 function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
