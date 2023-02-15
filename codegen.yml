@@ -1,4 +1,4 @@
-schema: https://api-sa-east-1.graphcms.com/v2/cl4vy4q0e1yql01un7yonane3/master
+schema: 'https://thekingtesters.saleor.cloud/graphql/',
 
 documents: ./src/graphql/**/*.graphql
 
