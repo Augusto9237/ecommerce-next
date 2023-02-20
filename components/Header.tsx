@@ -1,7 +1,7 @@
 export function Header() {
   return (
     <header className="flex justify-center max-sm:p-2 p-8">
-      <div className="flex flex-1  max-sm:flex-col max-sm:gap-2 justify-between gap-6 items-center max-w-[850px]">
+      <div className="flex flex-1  max-sm:flex-col max-sm:gap-1 justify-between gap-6 items-center max-w-[850px]">
         <strong className="font-bold text-2xl leading-relaxed text-blue-600">
           Cosmo
         </strong>
