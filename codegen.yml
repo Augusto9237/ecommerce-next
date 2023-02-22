@@ -1,9 +1,9 @@
-schema: 'https://thekingtesters.saleor.cloud/graphql/',
+schema: 'https://demo.saleor.io/graphql/',
 
-documents: ./src/graphql/**/*.graphql
+documents: "graphql/**/*.graphql"
 
 generates:
-  ./src/graphql/generated.ts:
+  saleor/api.ts:
     plugins:
       - typescript
       - typescript-operations

@@ -1,4 +1,4 @@
-schema: https://thekingtesters.saleor.cloud/
+schema: https://demo.saleor.io/graphql/
 documents: graphql/**/*.graphql
 extensions:
   codegen:
