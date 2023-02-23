@@ -1,4 +1,4 @@
-schema: 'https://demo.saleor.io/graphql/',
+schema: 'https://thekingtesters.saleor.cloud/graphql/',
 
 documents: "graphql/**/*.graphql"
 
