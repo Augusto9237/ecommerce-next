@@ -2,8 +2,8 @@ import { RiHome3Fill, RiSearchFill, RiShoppingCartFill, RiUser3Fill } from "reac
 
 export function BottomBar() {
     return (
-        <footer className="fixed bottom-0 bg-white flex w-full border-t border-gray-300 p-4">
-            <div className="flex max-w-[850px] w-full mx-auto justify-between px-2">
+        <footer className="fixed bottom-0 bg-white flex w-full border-t border-gray-300 p-4 lg:hidden">
+            <div className="flex max-w-[1160px] w-full mx-auto justify-between px-2">
                 <button className="flex text-gray-600 text-2xl hover:text-blue-600">
                     <RiHome3Fill />
                 </button>
