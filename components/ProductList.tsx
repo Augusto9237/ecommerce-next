@@ -11,7 +11,7 @@ export function ProductList() {
     const latestProducts = data.products.edges || [];
    
     return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-3">
         {latestProducts.map((product) => (
           <CardProduct title={product.node.name} urlImg={product.node.thumbnail.url} />
         ))}
