@@ -2,7 +2,7 @@ export function Header() {
   return (
     <header className="bg-white flex justify-center max-sm:p-3 p-8 shadow-[0_25px_64px_-40px_rgba(0,0,0,0.2)]">
 
-      <div className="flex w-full max-sm:flex-col max-sm:gap-1 justify-between gap-6 items-center max-w-[850px]">
+      <div className="flex w-full max-sm:flex-col max-sm:gap-1 justify-between gap-6 items-center max-w-[1160px]">
         <strong className="font-bold text-2xl leading-relaxed text-blue-600">
           Cosmo
         </strong>

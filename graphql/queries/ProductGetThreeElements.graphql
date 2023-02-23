@@ -5,6 +5,9 @@ query ProductGetThreeElements {
         id
         name
         description
+        thumbnail {
+          url
+        }
       }
     }
   }
