@@ -1,7 +1,7 @@
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://thekingtesters.saleor.cloud/graphql/',
+  uri: 'https://eletro-pecas-valente.saleor.cloud/graphql/',
   cache: new InMemoryCache(),
 });
 
