@@ -1,24 +1,10 @@
-import { RiHome3Fill, RiSearchFill, RiShoppingCartFill, RiUser3Fill } from "react-icons/ri";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 
 export function BottomBar() {
     return (
-        <footer className="fixed bottom-0 bg-white flex w-full border-t border-gray-300 p-4 lg:hidden">
-            <div className="flex max-w-[1160px] w-full mx-auto justify-between px-2">
-                <button className="flex text-gray-600 text-2xl hover:text-blue-600">
-                    <RiHome3Fill />
-                </button>
-
-                <button className="flex text-gray-600 text-2xl hover:text-blue-600">
-                    <RiSearchFill />
-                </button>
-
-                <button className="flex text-gray-600 text-2xl hover:text-blue-600">
-                    <RiShoppingCartFill />
-                </button>
-
-                <button className="flex text-gray-600 text-2xl hover:text-blue-600">
-                    <RiUser3Fill />
-                </button>
+        <footer className="bottom-0 bg-detailsPrimary-100 flex w-full p-4 border-t-2 border-solid border-background-50/30">
+            <div className="flex max-w-[1200px] w-full mx-auto justify-center px-2">
+                <span className="text-background-50">© 2023 All rights reserved. Augusto Sousa.</span>
             </div>
         </footer>
     );

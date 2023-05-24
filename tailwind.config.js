@@ -30,7 +30,11 @@ module.exports = {
       },
       detailsSecondary: {
         100: "#666666",
+        500: "#249B3E",
       },
+      border:{
+        100: '#EDEDED'
+      }
     },
   },
   plugins: [],

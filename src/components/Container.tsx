@@ -6,7 +6,7 @@ interface ContainerProps {
 
 export function Container({children}: ContainerProps) {
     return (
-        <main className="max-w-[1200px] h-fit flex-1 mx-auto py-3 pb-3 max-sm:px-2 overflow-y-auto max-sm:mb-14">
+        <main className="bg-background-50 max-w-[1200px] overflow-hidden max-h-screen overflow-y-auto flex-1 mx-auto max-sm:px-2 max-sm:mb-14">
             {children}
         </main>
     )

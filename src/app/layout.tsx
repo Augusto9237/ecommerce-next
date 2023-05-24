@@ -1,4 +1,6 @@
+import { BottomBar } from '../components/BottomBar';
 import { Header } from '../components/Header';
+import { NavigationBarCategories } from '../components/NavigationBarCateogries';
 import '../globals.css'
 import ProvidersWrapper from './ProvidersWrapper';
 
@@ -9,12 +11,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  return (  
+  return (
     <html lang="pt-br">
-      <body className='bg-background-100'>
+      <body className='bg-background-100 text-detailsSecondary-100'>
         <ProvidersWrapper>
-            <Header/>
+          <Header />
+          <NavigationBarCategories/>
           {children}
+          <BottomBar/>
         </ProvidersWrapper>
       </body>
     </html>
