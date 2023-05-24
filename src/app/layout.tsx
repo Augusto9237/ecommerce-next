@@ -16,7 +16,6 @@ export default function RootLayout({
       <body className='bg-background-100 text-detailsSecondary-100'>
         <ProvidersWrapper>
           <Header />
-          <NavigationBarCategories/>
           {children}
           <BottomBar/>
         </ProvidersWrapper>

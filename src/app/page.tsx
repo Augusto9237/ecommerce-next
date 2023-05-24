@@ -18,7 +18,7 @@ export default function Home() {
                     <FiChevronRight/>
                 </Link>
             </header>
-            <div className="grid grid-cols-5 px-4 mb-4 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 px-4 mb-4 md:grid-cols-5 gap-4">
                 {latestProducts?.map((product) => (
                     <CardProduct title={product.node.name} urlImg={product.node.thumbnail!.url} />
                 ))}

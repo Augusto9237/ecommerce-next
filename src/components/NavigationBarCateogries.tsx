@@ -12,8 +12,8 @@ export function NavigationBarCategories() {
     const [radioSelection, setRadioSelection] = React.useState(RADIO_ITEMS[2]);
 
     return (
-        <Menubar.Root className="flex max-h-[69px] relative p-4 justify-center bg-background-50 border-y-[1px] border-border-100 border-solid">
-            <div className='flex flex-1 max-w-[1200px] text-base gap-4'>
+        <Menubar.Root className="flex max-h-[69px] relative p-2 justify-center bg-background-50 border-y-[1px] border-border-100 border-solid max-sm:hidden">
+            <div className='flex flex-1 px-4 max-w-[1200px] text-base gap-4'>
                 <Menubar.Menu>
                     <Menubar.Trigger className="p-2 outline-none select-none text-detailsPrimary-100 font-medium rounded-md flex items-center justify-between gap-2 bg-detailsPrimary-100/5 data-[highlighted]:bg-detailsPrimary-100/5 data-[state=open]:bg-detailsPrimary-100 data-[state=open]:text-background-50 group">
                         <div className='text-detailsSecondary-100 group:text-background-50 group-data-[state=open]:text-background-50 '>Categoria 1</div>
@@ -23,7 +23,7 @@ export function NavigationBarCategories() {
                         <Menubar.Content
                             className="min-w-[220px] bg-background-50 rounded-md p-2 shadow-lg [animation-duration:_400ms] [animation-timing-function:_cubic-bezier(0.16,_1,_0.3,_1)] will-change-[transform,opacity]"
                             align="start"
-                            sideOffset={16}
+                            sideOffset={12}
                             alignOffset={-3}
                         >
                             <Menubar.Item className="group text-base leading-none flex items-center p-2 relative select-none outline-none hover:bg-detailsPrimary-100/10 data-[highlighted]:from-violet9 data-[highlighted]:to-violet10 data-[highlighted]:text-violet1 data-[highlighted]:data-[state=open]:text-violet1 data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none">
