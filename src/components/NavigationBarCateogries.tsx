@@ -4,18 +4,15 @@ import * as Menubar from '@radix-ui/react-menubar';
 import { FiChevronDown } from 'react-icons/fi';
 import Link from 'next/link';
 
-const RADIO_ITEMS = ['Andy', 'Benoît', 'Luis'];
-const CHECK_ITEMS = ['Always Show Bookmarks Bar', 'Always Show Full URLs'];
 
 export function NavigationBarCategories() {
-    const [checkedSelection, setCheckedSelection] = React.useState([CHECK_ITEMS[1]]);
-    const [radioSelection, setRadioSelection] = React.useState(RADIO_ITEMS[2]);
+   
 
     return (
-        <Menubar.Root className="flex max-h-[69px] relative p-2 justify-center bg-background-50 border-y-[1px] border-border-100 border-solid max-sm:hidden">
-            <div className='flex flex-1 px-4 max-w-[1200px] text-base gap-4'>
+        <Menubar.Root className="flex max-h-[60px] relative  justify-center bg-background-50 border-y-[1px] border-border-100 border-solid max-sm:hidden">
+            <div className='flex flex-1 p-3 max-w-[1200px] text-base gap-4'>
                 <Menubar.Menu>
-                    <Menubar.Trigger className="p-2 outline-none select-none text-detailsPrimary-100 font-medium rounded-md flex items-center justify-between gap-2 bg-detailsPrimary-100/5 data-[highlighted]:bg-detailsPrimary-100/5 data-[state=open]:bg-detailsPrimary-100 data-[state=open]:text-background-50 group">
+                    <Menubar.Trigger className="py-1 px-2 outline-none select-none text-detailsPrimary-100 font-medium rounded-md flex items-center justify-between gap-2 bg-detailsPrimary-100/5 data-[highlighted]:bg-detailsPrimary-100/5 data-[state=open]:bg-detailsPrimary-100 data-[state=open]:text-background-50 group">
                         <div className='text-detailsSecondary-100 group:text-background-50 group-data-[state=open]:text-background-50 '>Categoria 1</div>
                         <FiChevronDown size={18} className='mt-[1px]'/>
                     </Menubar.Trigger>

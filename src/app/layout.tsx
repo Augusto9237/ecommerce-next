@@ -1,6 +1,8 @@
 import { BottomBar } from '../components/BottomBar';
 import { Header } from '../components/Header';
 import { NavigationBarCategories } from '../components/NavigationBarCateogries';
+import { Sidebar } from '../components/Sidebar';
+import { GlobalProvider } from '../context/globalsProvider';
 import '../globals.css'
 import ProvidersWrapper from './ProvidersWrapper';
 
@@ -15,9 +17,12 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className='bg-background-100 text-detailsSecondary-100'>
         <ProvidersWrapper>
-          <Header />
-          {children}
-          <BottomBar/>
+          <GlobalProvider>
+            <Header />
+            
+            {children}
+            <BottomBar />
+          </GlobalProvider>
         </ProvidersWrapper>
       </body>
     </html>
