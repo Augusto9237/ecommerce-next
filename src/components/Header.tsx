@@ -11,7 +11,7 @@ export function Header() {
     <header className="fixed z-50 w-full bg-background-50 flex flex-col justify-center ">
       <div className="flex flex-1 mx-auto w-full justify-between max-sm:flex-col max-sm:gap-1  gap-6 items-center max-w-[1200px] max-sm:p-3 p-5">
         <div className="relative flex flex-row gap-4 text-detailsPrimary-100 max-sm:flex-1 max-sm:w-full">
-          <button onClick={() => setSidebarState(sidebarState === false? true  : false)} className="absolute bg-detailsPrimary-100/10 flex  flex-row items-center justify-center rounded-lg w-12 h-12 ">
+          <button onClick={() => setSidebarState(sidebarState === false? true  : false)} className="absolute bg-detailsPrimary-100/10 flex  flex-row items-center justify-center rounded-lg w-12 h-12 sm:hidden ">
             <FiMenu size={24} />
           </button>
           <strong className="font-bold text-3xl leading-relaxed max-sm:mx-auto">
