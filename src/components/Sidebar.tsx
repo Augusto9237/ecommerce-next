@@ -8,10 +8,13 @@ interface SideBarProps {
 }
 
 export function Sidebar({ children }: SideBarProps) {
-    const {sidebarState} = useContext(ContextGlobals)
+    const { sidebarState } = useContext(ContextGlobals)
     return (
-        <nav className={clsx("overflow-hidden fixed z-0 md:hidden flex flex-col py-4 pt-36 gap-8 top-0 left-0 w-0 rounded-sm h-full bg-background-50 shadow-2xl shadow-detailsSecondary-100 delay-80 duration-500", 
-        { 'w-52': sidebarState === true})}>
+        <nav className={clsx("overflow-hidden fixed z-0 sm:hidden flex flex-col py-4 pt-32 gap-8 top-0 left-0 w-52 rounded-sm h-full bg-background-50 shadow-2xl shadow-detailsSecondary-100 delay-80 duration-500",
+            {
+                'translate-x-0': sidebarState === true,
+                '-translate-x-56': sidebarState === false
+            })}>
             {children}
         </nav>
     )
