@@ -1,0 +1,26 @@
+query GetProductById($id: ID = "") {
+  product(id: $id, channel: "default-channel") {
+    isAvailableForPurchase
+    name
+    rating
+    description
+    id
+    pricing {
+      priceRangeUndiscounted {
+        stop {
+          gross {
+            amount
+          }
+        }
+      }
+    }
+    media {
+      id
+      url(format: ORIGINAL)
+      sortOrder
+    }
+    category {
+      name
+    }
+  }
+}

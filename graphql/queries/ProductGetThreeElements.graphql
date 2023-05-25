@@ -8,6 +8,15 @@ query ProductGetThreeElements {
         thumbnail {
           url
         }
+        pricing {
+          priceRangeUndiscounted {
+            stop {
+              gross {
+                amount
+              }
+            }
+          }
+        }
       }
     }
   }
