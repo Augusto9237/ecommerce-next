@@ -12,7 +12,7 @@ interface ContainerProps {
 export function Container({ children }: ContainerProps) {
     const {sidebarState} = useContext(ContextGlobals);
     return (
-        <main className="relative bg-background-50 max-w-[1200px] pt-36 overflow-hidden h-full min-h-screen overflow-y-auto flex-1 mx-auto max-sm:px-2 max-sm:mb-14 max-sm:pt-32">
+        <main className="relative bg-background-50 max-w-[1200px] pt-36 overflow-hidden h-full min-h-screen overflow-y-auto flex-1 mx-auto max-sm:px-2 max-sm:mb-14 max-sm:pt-[7.5rem]">
             <Sidebar>
                 <Link href='/' className={clsx("items-center  justify-between  text-base font-medium pl-3 p-2 hover:bg-background-100", {
                     'hidden': sidebarState === false,
