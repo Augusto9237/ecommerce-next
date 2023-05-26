@@ -19,8 +19,31 @@ query GetProductById($id: ID = "") {
       url(format: ORIGINAL)
       sortOrder
     }
+    seoDescription
     category {
+      id
       name
+      products(first: 5, channel: "default-channel") {
+        edges {
+          node {
+            id
+            thumbnail(format: ORIGINAL) {
+              alt
+              url
+            }
+            name
+            pricing {
+              priceRangeUndiscounted {
+                stop {
+                  gross {
+                    amount
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

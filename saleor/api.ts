@@ -26678,7 +26678,7 @@ export type GetProductByIdQueryVariables = Exact<{
 }>;
 
 
-export type GetProductByIdQuery = { __typename?: 'Query', product?: { __typename?: 'Product', isAvailableForPurchase?: boolean | null, name: string, rating?: number | null, description?: any | null, id: string, pricing?: { __typename?: 'ProductPricingInfo', priceRangeUndiscounted?: { __typename?: 'TaxedMoneyRange', stop?: { __typename?: 'TaxedMoney', gross: { __typename?: 'Money', amount: number } } | null } | null } | null, media?: Array<{ __typename?: 'ProductMedia', id: string, url: string, sortOrder?: number | null }> | null, category?: { __typename?: 'Category', name: string } | null } | null };
+export type GetProductByIdQuery = { __typename?: 'Query', product?: { __typename?: 'Product', isAvailableForPurchase?: boolean | null, name: string, rating?: number | null, description?: any | null, id: string, seoDescription?: string | null, pricing?: { __typename?: 'ProductPricingInfo', priceRangeUndiscounted?: { __typename?: 'TaxedMoneyRange', stop?: { __typename?: 'TaxedMoney', gross: { __typename?: 'Money', amount: number } } | null } | null } | null, media?: Array<{ __typename?: 'ProductMedia', id: string, url: string, sortOrder?: number | null }> | null, category?: { __typename?: 'Category', id: string, name: string, products?: { __typename?: 'ProductCountableConnection', edges: Array<{ __typename?: 'ProductCountableEdge', node: { __typename?: 'Product', id: string, name: string, thumbnail?: { __typename?: 'Image', alt?: string | null, url: string } | null, pricing?: { __typename?: 'ProductPricingInfo', priceRangeUndiscounted?: { __typename?: 'TaxedMoneyRange', stop?: { __typename?: 'TaxedMoney', gross: { __typename?: 'Money', amount: number } } | null } | null } | null } }> } | null } | null } | null };
 
 
 export const ProductGetThreeElementsDocument = gql`
@@ -26798,8 +26798,31 @@ export const GetProductByIdDocument = gql`
       url(format: ORIGINAL)
       sortOrder
     }
+    seoDescription
     category {
+      id
       name
+      products(first: 5, channel: "default-channel") {
+        edges {
+          node {
+            id
+            thumbnail(format: ORIGINAL) {
+              alt
+              url
+            }
+            name
+            pricing {
+              priceRangeUndiscounted {
+                stop {
+                  gross {
+                    amount
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
