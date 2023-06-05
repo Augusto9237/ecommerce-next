@@ -8,12 +8,12 @@ import { FiChevronRight } from 'react-icons/fi';
 export function CollapsibleCategories() {
     const { sidebarState } = useContext(ContextGlobals);
     return (
-        <Collapsible.Root>
-            <Collapsible.Trigger className={clsx("items-center  justify-between  text-base font-medium pl-3 p-2 hover:bg-background-100", {
+        <Collapsible.Root className='w-full'>
+            <Collapsible.Trigger className={clsx("flex flex-1 w-full items-center   text-base font-medium pl-3 p-2 hover:bg-background-100", {
                 'hidden': sidebarState === false,
                 'flex': sidebarState === true
             })}>
-                <button className='flex flex-1 flex-row w-full'>
+                <button className='flex flex-1 flex-row w-full items-center justify-between'>
                     <span>Categorias</span>
                     <FiChevronRight size={18} className="mt-[2px] text-detailsPrimary-100" />
                 </button>
