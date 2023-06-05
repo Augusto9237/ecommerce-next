@@ -19,7 +19,7 @@ export function CollapsibleCategories() {
                 </button>
             </Collapsible.Trigger>
 
-            <Collapsible.Content>
+            <Collapsible.Content className='px-2'>
                 <span>teste</span>
             </Collapsible.Content>
         </Collapsible.Root>
