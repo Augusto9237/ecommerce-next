@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { FiChevronRight } from "react-icons/fi";
-import { useGetCategoriesQuery, useProductGetThreeElementsQuery } from "../../saleor/api";
 import { CardCategory } from "./CardCategory";
+import { useContext } from "react";
+import { ContextGlobals } from "../context/contextGlobals";
 
 export function CatergoriesList() {
-    const { data, loading, error } = useGetCategoriesQuery()
-    const latestCategories = data?.categories?.edges || [];
+    const {categories} = useContext(ContextGlobals)
 
     return (
         <section className="w-full overflow-hidden">
@@ -17,7 +17,7 @@ export function CatergoriesList() {
                 </Link>
             </header>
             <div className="flex flex-1 w-full p-4 mb-4 gap-4 max-sm:overflow-x-auto">
-                {latestCategories?.map((categry) => (
+                {categories?.categories?.edges.map((categry) => (
                     <CardCategory title={categry.node.name} urlImg={categry.node.backgroundImage?.url} />
                 ))}
             </div>
