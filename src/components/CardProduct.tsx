@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function CardProduct({ id, title, urlImg, pricing }) {
     return (
-        <Link href={`/details/${id}`} className="bg-background-100 flex flex-col justify-center items-center rounded-2xl  overflow-hidden shadow-lg object-cover">
+        <Link href={`/details/${id}`} className="bg-background-100 flex flex-col justify-center items-center rounded-2xl  overflow-hidden shadow-md object-cover">
             <img src={urlImg} className="h-full" />
             <div className="flex flex-col w-full bg-background-50 p-3">
                 <strong>{title}</strong>
