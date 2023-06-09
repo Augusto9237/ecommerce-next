@@ -10,7 +10,7 @@ export default function Cart() {
 
     return (
         <Container>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 p-4">
                 {latestProducts?.map((product) => (
                     <CardCheckout
                         key={product.node.id}
