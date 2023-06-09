@@ -31,10 +31,10 @@ export function Header() {
               <FiUser size={24} />
               <span className="text-detailsSecondary-100 text-base font-medium max-sm:hidden">Sign Up/Sign In</span>
             </Link>
-            <button className="flex p-1 pl-5 rounded-lg border border-gray-400 gap-1 max-sm:pl-3">
+            <Link href='/cart' className="flex p-1 pl-5 rounded-lg border border-gray-400 gap-1 max-sm:pl-3">
               <FiShoppingCart size={24} />
               <span className="text-detailsSecondary-100 text-base font-medium max-sm:hidden">Cart</span>
-            </button>
+            </Link>
           </div>
         </div>
 
