@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useGetProductByIdQuery } from "../../saleor/api";
 import Link from "next/link";
+import { formatReal } from "../utils/formatReal";
 
 export function ProductDetail({ id }) {
   const { data, loading } = useGetProductByIdQuery({
@@ -28,7 +29,7 @@ export function ProductDetail({ id }) {
           <div className="flex flex-col flex-1 px-2 gap-4">
             <h1 className="text-2xl font-medium">{detailProduct?.name}</h1>
             {detailProduct?.description}
-            <strong className="text-detailsSecondary-500">R$ {detailProduct?.pricing?.priceRangeUndiscounted?.stop?.gross.amount}</strong>
+            <strong className="text-detailsSecondary-500">R$ {formatReal(detailProduct?.pricing?.priceRangeUndiscounted?.stop?.gross?.amount!)}</strong>
             <button className="bg-detailsPrimary-100 p-2 w-full rounded mt-2 hover:bg-blue-600">
               <span className="text-background-50 font-semibold">Comprar</span>
             </button>
