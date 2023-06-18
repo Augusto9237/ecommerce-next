@@ -10,13 +10,14 @@ interface GlobalsProps {
 
 export const GlobalProvider = ({ children }: GlobalsProps) => {
     const [sidebarState, setSidebarState] = useState(false);
-    const { data: categories, loading, error } = useGetCategoriesQuery()
+    const { data: categories, loading: loadingCategories, error } = useGetCategoriesQuery()
   
     return (
         <ContextGlobals.Provider value={{
             sidebarState,
             setSidebarState,
             categories,
+            loadingCategories
         }}>
             {children}
         </ContextGlobals.Provider>

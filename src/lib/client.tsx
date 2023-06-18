@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 export const client = new ApolloClient({
-    uri: 'https://eletro-pecas-valente.saleor.cloud/graphql/',
+    uri: 'https://demo.saleor.io/graphql/',
     cache: new InMemoryCache(),
 });

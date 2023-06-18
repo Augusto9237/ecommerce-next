@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { ContextGlobals } from "../context/contextGlobals";
 
 export function CatergoriesList() {
-    const {categories} = useContext(ContextGlobals)
+    const {categories} = useContext(ContextGlobals);
 
     return (
         <section className="w-full overflow-hidden">
