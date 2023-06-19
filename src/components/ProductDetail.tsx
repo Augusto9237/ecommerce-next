@@ -38,7 +38,7 @@ export function ProductDetail({ id }) {
       </section>
       <section className="flex flex-col flex-1 px-2">
         <strong className="text-lg">Recomendados para você</strong>
-        <div className="flex flex-row flex-1 overflow-x-auto gap-2">
+        <div className="flex flex-row flex-1 overflow-x-auto gap-2 pb-2">
           {detailProduct?.category?.products?.edges.map((product) => (
             <Link key={product.node.id} href={`/details/${product.node.id}`} className="flex flex-col flex-1 min-h-fit max-w-[150px]">
               <div className="w-36 h-40 overflow-hidden">
@@ -46,7 +46,7 @@ export function ProductDetail({ id }) {
               </div>
               <div className="flex flex-col items-center">
                 <p>{product.node.name}</p>
-                <strong>R$ {product.node.pricing?.priceRangeUndiscounted?.stop?.gross.amount}</strong>
+                <strong>{formatReal(product.node.pricing?.priceRangeUndiscounted?.stop?.gross?.amount!)}</strong>
               </div>
             </Link>
           ))}
