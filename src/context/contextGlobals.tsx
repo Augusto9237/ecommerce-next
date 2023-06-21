@@ -7,6 +7,7 @@ export interface GlobalContextProps {
     setSidebarState: Dispatch<SetStateAction<boolean>>;
     categories: GetCategoriesQuery | undefined;
     loadingCategories: boolean;
+    token: unknown;
 }
 
 export const ContextGlobals = createContext<GlobalContextProps>(null!);

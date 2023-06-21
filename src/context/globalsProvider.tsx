@@ -1,8 +1,9 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { ContextGlobals } from "./contextGlobals";
-import { useGetCategoriesQuery } from "../../saleor/api";
+import { useCreateCheckoutMutation, useGetCategoriesQuery } from "../../saleor/api";
+import { useLocalStorage } from "react-use";
 
 interface GlobalsProps {
     children: ReactNode;
@@ -10,14 +11,30 @@ interface GlobalsProps {
 
 export const GlobalProvider = ({ children }: GlobalsProps) => {
     const [sidebarState, setSidebarState] = useState(false);
-    const { data: categories, loading: loadingCategories, error } = useGetCategoriesQuery()
-  
+    const { data: categories, loading: loadingCategories, error } = useGetCategoriesQuery();
+    const [token, setToken] = useLocalStorage("token");
+    const [createCheckout, { data, loading }] = useCreateCheckoutMutation();
+
+    useEffect(() => {
+        async function doCheckout() {
+            const { data } = await createCheckout();
+            const token = data?.checkoutCreate?.checkout?.token;
+
+            setToken(token);
+        }
+
+        doCheckout();
+    }, []);
+
+    
+
     return (
         <ContextGlobals.Provider value={{
             sidebarState,
             setSidebarState,
             categories,
-            loadingCategories
+            loadingCategories,
+            token
         }}>
             {children}
         </ContextGlobals.Provider>

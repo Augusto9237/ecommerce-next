@@ -4,7 +4,12 @@ import { useGetProductByIdQuery } from "../../saleor/api";
 import Link from "next/link";
 import { formatReal } from "../utils/formatReal";
 
-export function ProductDetail({ id }) {
+interface ProductDetailsProps{
+  id: string
+  onAddToCart: () => Promise<void>;
+}
+
+export function ProductDetail({ id, onAddToCart }: ProductDetailsProps) {
   const { data, loading } = useGetProductByIdQuery({
     variables: {
       id: id
@@ -30,7 +35,7 @@ export function ProductDetail({ id }) {
             <h1 className="text-2xl font-medium">{detailProduct?.name}</h1>
             {detailProduct?.description}
             <strong className="text-detailsSecondary-500">R$ {formatReal(detailProduct?.pricing?.priceRangeUndiscounted?.stop?.gross?.amount!)}</strong>
-            <button className="bg-detailsPrimary-100 p-2 w-full rounded mt-2 hover:bg-blue-600">
+            <button onClick={onAddToCart} className="bg-detailsPrimary-100 p-2 w-full rounded mt-2 hover:bg-blue-600">
               <span className="text-background-50 font-semibold">Comprar</span>
             </button>
           </div>
