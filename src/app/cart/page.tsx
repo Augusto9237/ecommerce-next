@@ -3,6 +3,7 @@ import { useLocalStorage } from "react-use";
 import { useCheckoutByTokenQuery, useProductGetThreeElementsQuery } from "../../../saleor/api";
 import { CardCheckout } from "../../components/CardCheckout"
 import { Container } from "../../components/Container"
+import { useEffect } from "react";
 
 
 export default function Cart() {
@@ -12,6 +13,7 @@ export default function Cart() {
         skip: !token,
     });
 
+console.log(data);
 
 
     return (

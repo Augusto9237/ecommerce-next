@@ -26,6 +26,7 @@ export const GlobalProvider = ({ children }: GlobalsProps) => {
         doCheckout();
     }, []);
 
+    console.log(data);
     
 
     return (
