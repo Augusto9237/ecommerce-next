@@ -20,16 +20,16 @@ export function ProductDetail({ id, onAddToCart }: ProductDetailsProps) {
   const imagesSlide = data?.product?.media
 
   return (
-    <main className="flex flex-col gap-4">
+    <main className="flex flex-col">
       <section>
         <header className="flex items-center justify-between mb-5 border-b-[1px] border-solid border-border-100">
           <h1 className="text-2xl px-4 p-2 border-b-2 border-solid border-detailsPrimary-100 max-sm:text-xl">Detalhes do produto</h1>
         </header>
-        <div className="flex flex-row max-sm:flex-col flex-1 w-ful">
+        <div className="flex flex-row max-sm:flex-col flex-1 w-ful gap-4 px-4">
           <div className="flex flex-1">
             <Carousel images={imagesSlide ? imagesSlide : []} />
           </div>
-          <div className="flex flex-col flex-1 px-2 gap-4">
+          <div className="flex flex-col flex-1 gap-4">
             <h1 className="text-2xl font-medium">{detailProduct?.name}</h1>
             {detailProduct?.description}
             <strong className="text-detailsSecondary-500">R$ {formatReal(detailProduct?.pricing?.priceRangeUndiscounted?.stop?.gross?.amount!)}</strong>
