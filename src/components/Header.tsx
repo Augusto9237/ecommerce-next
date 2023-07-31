@@ -6,17 +6,19 @@ import { useContext } from "react";
 import { ContextGlobals } from "../context/contextGlobals";
 
 export function Header() {
-  const {setSidebarState, sidebarState} = useContext(ContextGlobals)
+  const { setSidebarState, sidebarState } = useContext(ContextGlobals)
   return (
     <header className="fixed z-50 w-full bg-background-50 flex flex-col justify-center max-sm:border-b-[1px] border-border-100 border-solid ">
       <div className="flex flex-1 mx-auto w-full justify-between max-sm:flex-col max-sm:gap-2  gap-6 items-center max-w-[1200px] max-sm:p-3 p-5">
         <div className="relative flex flex-row gap-4 text-detailsPrimary-100 max-sm:flex-1 max-sm:w-full">
-          <button onClick={() => setSidebarState(sidebarState === false? true  : false)} className="absolute top-2 bg-detailsPrimary-100/10 flex  flex-row items-center justify-center rounded-lg w-9 h-9 sm:hidden ">
+          <button onClick={() => setSidebarState(sidebarState === false ? true : false)} className="absolute top-2 bg-detailsPrimary-100/10 flex  flex-row items-center justify-center rounded-lg w-9 h-9 sm:hidden ">
             <FiMenu size={24} />
           </button>
-          <strong className="font-bold text-3xl leading-relaxed max-sm:mx-auto">
-            MegaStore
-          </strong>
+          <Link href="/">
+            <strong className="font-bold text-3xl leading-relaxed max-sm:mx-auto">
+              MegaStore
+            </strong>
+          </Link>
         </div>
 
 
