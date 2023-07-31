@@ -39,7 +39,7 @@ export function ProductDetail({ id, onAddToCart }: ProductDetailsProps) {
           </div>
         </div>
       </section>
-      <section className="flex flex-col flex-1 px-2">
+      <section className="flex flex-col flex-1 px-4">
         <strong className="text-lg">Recomendados para você</strong>
         <div className="flex flex-row flex-1 overflow-x-auto gap-2 pb-2">
           {detailProduct?.category?.products?.edges.map((product) => (
