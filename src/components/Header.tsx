@@ -14,8 +14,8 @@ export function Header() {
           <button onClick={() => setSidebarState(sidebarState === false ? true : false)} className="absolute top-2 bg-detailsPrimary-100/10 flex  flex-row items-center justify-center rounded-lg w-9 h-9 sm:hidden ">
             <FiMenu size={24} />
           </button>
-          <Link href="/">
-            <strong className="font-bold text-3xl leading-relaxed max-sm:mx-auto">
+          <Link href="/" className="max-sm:mx-auto">
+            <strong className="font-bold text-3xl leading-relaxed">
               MegaStore
             </strong>
           </Link>
